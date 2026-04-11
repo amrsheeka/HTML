@@ -5,21 +5,18 @@ let lettersContainer = document.querySelector(".letters");
 let drawingArray =["stand","hang","rope","head", "body","hands","legs"];
 let drawingCalsses = [];
 drawingCalsses.push(...drawingArray.map(item => document.querySelector(`.${item}`)));
-// generate letters
 lettersArray.forEach(letter => {
   let span = document.createElement("span");
   span.innerHTML = letter;
   lettersContainer.appendChild(span);
 });
 
-// words
 let words = {
   programming: ["js", "php", "go"],
   movies: ["avatar", "matrix", "up"],
   people: ["ahmed", "amr", "ali"]
 };
 
-// random
 let allKeys = Object.keys(words);
 let randomProp = allKeys[Math.floor(Math.random() * allKeys.length)];
 let randomValue = words[randomProp];
@@ -27,7 +24,6 @@ let randomWord = randomValue[Math.floor(Math.random() * randomValue.length)];
 
 document.querySelector(".category").innerHTML = randomProp;
 
-// guess letters
 let lettersGuessContainer = document.querySelector(".letters-guess");
 
 let lettersAndSpace = Array.from(randomWord);
@@ -68,7 +64,6 @@ document.addEventListener("click", function(e) {
       }
     }
 
-    // check win
     if ([...lettersGuessContainer.children].every(span => span.innerHTML !== "")) {
       endGame(true);
     }
