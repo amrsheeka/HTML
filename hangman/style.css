@@ -1,0 +1,151 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.letters span {
+  display: inline-block;
+  background: green;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.letters span.clicked {
+  background: grey;
+  pointer-events: none;
+}
+
+.letters-guess span {
+  border-bottom: 3px solid black;
+  width: 20px;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+}
+
+.hangman-draw {
+  width: 200px;
+  height: 300px;
+  position: relative;
+}
+
+.the-draw {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* stand */
+.stand {
+  width: 4px;
+  height: 100%;
+  background: black;
+  position: absolute;
+  left: 20px;
+  display: none;
+}
+
+/* hang */
+.hang {
+  width: 100px;
+  height: 4px;
+  background: black;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  display: none;
+}
+
+/* rope */
+.rope {
+  width: 2px;
+  height: 30px;
+  background: black;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  display: none;
+}
+
+/* head */
+.head {
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 105px;
+  top: 30px;
+  display: none;
+}
+
+/* body */
+.body {
+  width: 3px;
+  height: 60px;
+  background: black;
+  position: absolute;
+  left: 120px;
+  top: 60px;
+  display: none;
+}
+
+/* hands */
+.hands::before,
+.hands::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 80px;
+  display: none;
+}
+
+.hands::before {
+  left: 80px;
+  transform: rotate(30deg);
+}
+
+.hands::after {
+  left: 120px;
+  transform: rotate(-30deg);
+}
+
+/* legs */
+.legs::before,
+.legs::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 120px;
+  display: none;
+}
+
+.legs::before {
+  left: 80px;
+  transform: rotate(-30deg);
+}
+
+.legs::after {
+  left: 120px;
+  transform: rotate(30deg);
+}
+.show-hands {
+  display: block;
+}
+
+.show-legs {
+  display: block;
+}
