@@ -55,9 +55,6 @@ document.addEventListener("click", function(e) {
 
     if (!status) {
       drawingCalsses[wrongAttempts].style.display = "block";
-      if (wrongAttempts == 5 || wrongAttempts == 6) {
-        drawingCalsses[wrongAttempts].classList.add(`show-${drawingArray[wrongAttempts]}`);
-      }
       wrongAttempts++;
       if (wrongAttempts == 7) {
         endGame(false);

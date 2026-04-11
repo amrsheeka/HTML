@@ -94,52 +94,44 @@ body {
   display: none;
 }
 
-.hands::before,
-.hands::after {
+.hand {
   content: "";
   width: 40px;
   height: 3px;
   background: black;
   position: absolute;
   top: 80px;
-  display: none;
 }
 
-.hands::before {
+#hand-1 {
   left: 80px;
   transform: rotate(30deg);
 }
 
-.hands::after {
+#hand-2 {
   left: 120px;
   transform: rotate(-30deg);
 }
-
-/* legs */
-.legs::before,
-.legs::after {
+.leg {
   content: "";
   width: 40px;
   height: 3px;
   background: black;
   position: absolute;
   top: 120px;
-  display: none;
 }
-
-.legs::before {
+#leg-1 {
   left: 80px;
   transform: rotate(-30deg);
+  color: #000;
 }
-
-.legs::after {
+#leg-2 {
   left: 120px;
   transform: rotate(30deg);
 }
-.show-hands {
-  display: block;
+.legs {
+  display: none;
 }
-
-.show-legs {
-  display: block;
+.hands {
+  display: none;
 }
