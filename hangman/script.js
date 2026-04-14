@@ -72,9 +72,9 @@ function endGame(win) {
   div.className = "popup";
   lettersContainer.style.pointerEvents = "none";
   if (win) {
-    div.innerHTML = "🎉 You Win";
+    div.innerHTML = "You Win";
   } else {
-    div.innerHTML = `💀 You Lose, Word is: ${randomWord}`;
+    div.innerHTML = `You Lose, Word is: ${randomWord}`;
   }
 
   document.body.appendChild(div);
